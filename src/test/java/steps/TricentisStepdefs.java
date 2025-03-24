@@ -27,7 +27,8 @@ public class TricentisStepdefs {
 
     @Then("I see the book {string}")
     public void iSeeTheBook(String name) {
-        WebElement product = driver.findElement(By.cssSelector(".product-item .details [href='/"+name.toLowerCase()+"']"));
+        WebElement product = driver.findElement(By
+                .cssSelector(".product-item .details [href='/"+name.toLowerCase()+"']"));
         assertEquals(name,product.getText());
     }
 }
