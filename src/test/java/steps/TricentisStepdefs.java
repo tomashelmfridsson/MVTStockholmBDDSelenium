@@ -19,11 +19,6 @@ public class TricentisStepdefs {
     private WebDriver driver;
     WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
-    @After
-    public void tearDown(){
-        driver.quit();
-    }
-
     @Given("I am at tricentis page")
     public void iAmOnPage() {
         driver = new ChromeDriver();
